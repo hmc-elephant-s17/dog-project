@@ -11816,7 +11816,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_files</span>       
@@ -11894,7 +11894,7 @@ There are 836 test dog images.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
@@ -11944,7 +11944,7 @@ There are 836 test dog images.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">cv2</span>                
@@ -13356,7 +13356,7 @@ Lf8fpi9BV22XAaYAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># returns &quot;True&quot; if face is detected in image stored at img_path</span>
@@ -13393,7 +13393,7 @@ Out of 100 dog images, 12 human faces are detected</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">human_files_short</span> <span class="o">=</span> <span class="n">human_files</span><span class="p">[:</span><span class="mi">100</span><span class="p">]</span>
@@ -13408,8 +13408,8 @@ Out of 100 dog images, 12 human faces are detected</p>
     <span class="n">human_count</span> <span class="o">+=</span> <span class="n">face_detector</span><span class="p">(</span><span class="n">human_files_short</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
     <span class="n">dog_count</span> <span class="o">+=</span> <span class="n">face_detector</span><span class="p">(</span><span class="n">dog_files_short</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 
-<span class="k">print</span> <span class="s2">&quot;Out of 100 human images, </span><span class="si">%i</span><span class="s2"> human faces are detected&quot;</span><span class="o">%</span> <span class="p">(</span><span class="n">human_count</span><span class="p">)</span>
-<span class="k">print</span> <span class="s2">&quot;Out of 100 dog images, </span><span class="si">%i</span><span class="s2"> human faces are detected&quot;</span><span class="o">%</span> <span class="p">(</span><span class="n">dog_count</span><span class="p">)</span>
+<span class="k">print</span> <span class="s2">&quot;Among the 100 human images, </span><span class="si">%i</span><span class="s2"> </span><span class="si">%%</span><span class="s2"> has a human face detected&quot;</span><span class="o">%</span> <span class="p">(</span><span class="n">human_count</span><span class="p">)</span>
+<span class="k">print</span> <span class="s2">&quot;Among the 100 dog images, </span><span class="si">%i</span><span class="s2"> </span><span class="si">%%</span><span class="s2"> has a human face detected&quot;</span><span class="o">%</span> <span class="p">(</span><span class="n">dog_count</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13424,8 +13424,8 @@ Out of 100 dog images, 12 human faces are detected</p>
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Out of 100 human images, 98 human faces are detected
-Out of 100 dog images, 12 human faces are detected
+<pre>Among the 100 human images, 98 % has a human face detected
+Among the 100 dog images, 12 % has a human face detected
 </pre>
 </div>
 </div>
@@ -14766,6 +14766,15 @@ Epoch 20/20
 <p><strong>Question 6:</strong> Is the output better than you expected :) ?  Or worse :( ?  Provide at least three possible points of improvement for your algorithm.</p>
 <p><strong>Answer:</strong></p>
 <p>The prediction is very good. The algorithm correctly categorizes the most of the objects except for the labrador. This is acceptable because as we have discussed before, labrador is among the hardest to detect because it has three colors and it could be really hard to detect in this case.</p>
+<p>I believe the output is better than I expected!:) Here are three possible point that I could use to improve the algorithm:</p>
+<ol>
+<li><p>provide more sample images for the neural net to learn so that it can learn more complex patterns of dogs.</p>
+</li>
+<li><p>try out other pretrained CNN and use transfer learning on them. Compare the results and choose the best model for this task.</p>
+</li>
+<li><p>augment the training data so that the model is not affected by the position of the dog.</p>
+</li>
+</ol>
 
 </div>
 </div>
